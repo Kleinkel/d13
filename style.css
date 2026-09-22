@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+
+:root {
+    --neon-primary: #00ff88;
+    --neon-cyan:    #00e5ff;
+    --neon-purple:  #aa00ff;
+    --neon-glow-g:  rgba(0, 255, 136, 0.4);
+    --neon-glow-c:  rgba(0, 229, 255, 0.5);
+    --neon-glow-p:  rgba(170, 0, 255, 0.5);
+    --bg-dark:      #060614;
+    --glass:        rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(0, 255, 136, 0.15);
+}
+
+html {
+    background: linear-gradient(135deg, #06060f, #0b1a10, #090620);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #e0e0e0;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.8);
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+h1#msgs {
+    font-size: 22px;
+    color: var(--neon-primary);
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--neon-primary), transparent);
+    margin: 20px auto;
+    width: 80%;
+}
+
+#progress {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#menu {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: var(--glass);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+#crypto {
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--glass);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+}
+
+#tools { display: none; }
+#lnx   { display: none; }
+#mods  { display: none; }
+
+.btn {
+    background: linear-gradient(145deg, #081a12, #0a2418);
+    color: #e0e0e0;
+    width: 280px;
+    height: 50px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 8px 5px;
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    font-family: 'Rajdhani', sans-serif;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #00ff88, #00cc6a);
+    color: #06060f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px var(--neon-glow-g);
+    border-color: var(--neon-primary);
+}
+
+.btn-onln {
+    background: linear-gradient(145deg, #0d1a3a, #091030);
+    border-color: rgba(0, 229, 255, 0.25);
+}
+
+.btn-onln:hover {
+    background: linear-gradient(145deg, var(--neon-cyan), #009dba);
+    color: #06060f;
+    box-shadow: 0 6px 24px var(--neon-glow-c);
+}
+
+/* ── Title block ── */
+.title-container {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.main-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ── Kleinkel name ── */
+.name-mustafa,
+.name-kleinkel {
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #00ff88, #00e5ff, #00ff88, #aaffdd, #00ff88);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: greenShine 3s linear infinite;
+    filter: drop-shadow(0 0 20px var(--neon-glow-g));
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+@keyframes greenShine {
+    to { background-position: 200% center; }
+}
+
+.ps4-title {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 15px var(--neon-glow-c), 0 0 30px var(--neon-glow-c);
+    margin: 10px 10px;
+    letter-spacing: 4px;
+}
+
+.ps5-title {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--neon-purple);
+    text-shadow: 0 0 15px var(--neon-glow-p), 0 0 30px var(--neon-glow-p);
+    margin: 10px 10px;
+    letter-spacing: 4px;
+}
+
+.subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    color: #888;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.version-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--neon-primary), var(--neon-purple));
+    color: #06060f;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 15px 0 25px;
+    box-shadow: 0 5px 20px var(--neon-glow-g);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+/* ── Status bar (ran/index.html) ── */
+.status-bar {
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.status-text {
+    display: block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    color: var(--neon-primary);
+    text-align: center;
+}
+
+.status-text.error {
+    color: #ff4757;
+    border-color: rgba(255, 71, 87, 0.35);
+}
+
+/* ── Container (ran/index.html) ── */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: var(--glass);
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+}
+
+/* ── Footer credit ── */
+.credit {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #ccc;
+    font-weight: 500;
+    text-align: center;
+}
+
+.credit-link {
+    background: linear-gradient(90deg, var(--neon-primary), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.thanks {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--neon-primary), transparent);
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .btn { width: 90%; }
+    .main-title { font-size: 1.8rem; }
+    .name-mustafa, .name-kleinkel { font-size: 2.2rem; }
+    .ps4-title, .ps5-title { font-size: 1.6rem; }
+}
